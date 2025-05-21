@@ -35,3 +35,7 @@ body {
 .addRemider-backgroud {
     background-color: rgba(1, 157, 107, 1)
 }
+
+.textCustomGreenColor {
+    color: rgba(1, 157, 107, 1);
+}

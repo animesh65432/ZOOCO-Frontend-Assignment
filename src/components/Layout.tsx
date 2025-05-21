@@ -4,7 +4,7 @@ import { Header } from './index';
 
 const Layout: React.FC = () => {
     return (
-        <div className="flex flex-col lg:gap-7 md:gap-5 gap-3 items-center background-color w-[100vw]">
+        <div className="min-h-screen flex flex-col lg:gap-7 md:gap-5 gap-5 items-center background-color w-[100vw]">
             <Header />
             <Outlet />
         </div>

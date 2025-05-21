@@ -1,3 +1,4 @@
+import cateGoryIcon from "../assets/addRemider/Frame1430103612.svg"
 export const data = [
     {
         id: 1,
@@ -48,3 +49,21 @@ export const data = [
         day: "Sunday"
     }
 ];
+export const CateGory = [{
+    name: "General",
+    icon: cateGoryIcon
+},
+{
+    name: "General",
+    icon: cateGoryIcon
+},
+{
+    name: "General",
+    icon: cateGoryIcon
+}]
+
+export const pets = [
+    { name: "Browny", value: "dog", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" },
+    { name: "Browny", value: "dog", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" },
+    { name: "Browny", value: "dog", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" }
+]
