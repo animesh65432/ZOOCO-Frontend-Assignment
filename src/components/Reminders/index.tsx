@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from './Title'
 import Calendar from './Calendar'
-import Remider from './Reminder'
+// import Remider from './Reminder'
 import AddRemider from './Add'
 import Footer from './Footer'
 import { LoaderCircle } from 'lucide-react';
