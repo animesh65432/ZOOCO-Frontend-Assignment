@@ -11,7 +11,7 @@ type Props = {
     day: string
 }
 
-const Remider: React.FC<Props> = ({ id, name, petname, timnig, day }) => {
+const Remider: React.FC<Props> = ({ name, petname, timnig, day }) => {
     return (
         <div className='w-[90vw] bg-white rounded-md lg:p-8 md:p-5 p-3 flex flex-col lg:gap-7 md:gap-4 gap-2' >
             <div className='md:text-2xl text-xl font-bold '>{name}</div>
