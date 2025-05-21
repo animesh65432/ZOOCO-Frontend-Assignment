@@ -63,6 +63,7 @@ const ReminderSettings: React.FC = () => {
                 <label className="block text-sm font-bold">Reminder Frequency</label>
                 <p className="text-xs text-gray-500">How often should this reminder repeat?</p>
                 <select className="border border-gray-300 rounded-md p-2 w-full mt-2">
+                    <option>Once</option>
                     <option>Everyday</option>
                     <option>Weekly</option>
                     <option>Monthly</option>
