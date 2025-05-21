@@ -1,6 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-.font-readex {
+html,
+body {
     font-family: 'Readex Pro', sans-serif;
+}
+
+.steakday-color {
+    background-color: rgba(185, 255, 125, 1);
+}
+
+.background-color {
+    background: rgba(243, 244, 246, 1);
+
+}
+
+.everyday-color {
+    background-color: rgba(217, 217, 217, 1);
+}
+
+.streamlinedCalendar-Color {
+    background-color: rgba(2, 200, 120, 1);
+}
+
+.everyday-text-color {
+    color: rgba(243, 244, 246, 1);
+}
+
+.remider-text-color {
+    color: rgb(160, 148, 148);
+
+}
+
+.addRemider-backgroud {
+    background-color: rgba(1, 157, 107, 1)
 }

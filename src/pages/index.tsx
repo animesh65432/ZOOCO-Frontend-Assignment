@@ -1,4 +1,4 @@
-import Remiders from "./Remiders";
-import AddRemider from "./AddRemider";
+import Remiders from "./Reminders";
+import AddRemider from "./AddReminder";
 
 export { Remiders, AddRemider }
