@@ -54,11 +54,11 @@ export const CateGory = [{
     icon: cateGoryIcon
 },
 {
-    name: "General",
+    name: "Lifestyle",
     icon: cateGoryIcon
 },
 {
-    name: "General",
+    name: "Health",
     icon: cateGoryIcon
 }]
 

@@ -22,7 +22,7 @@ const Form: React.FC = () => {
     }
 
     return (
-        <div className='mt-8 flex flex-col gap-7'>
+        <div className='mt-3 flex flex-col gap-7'>
             <div className="flex gap-2">
                 <PetSelect setPetClicked={setPetClicked} isPetClicked={isPetClicked} onClickpet={onClickpet} selected={selected} />
                 <CategorySelect
