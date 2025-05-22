@@ -49,27 +49,19 @@ export const useUpdateReminder = () => {
         mutationFn: (params: {
             id: string;
             data: {
-                pet: string;
-                category: string;
                 title: string;
-                startDateTime: Date;
-                endDateTime: Date;
+                pet: string;
                 frequency: string;
-                ReminderTime: Date;
-                notes?: string;
+                ReminderTime: string;
             };
         }) => {
             const { id, data } = params;
             return update(
                 id,
-                data.pet,
-                data.category,
                 data.title,
-                data.startDateTime,
-                data.endDateTime,
+                data.pet,
                 data.frequency,
-                data.ReminderTime,
-                data.notes
+                data.ReminderTime
             );
         },
         onSuccess: () => {

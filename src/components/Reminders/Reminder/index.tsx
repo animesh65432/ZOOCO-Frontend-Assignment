@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import dogicon from "../../../assets/reminders/sharp.svg"
 import alarmclock from "../../../assets/reminders/alarm-clock-check.svg"
 import dayicon from "../../../assets/reminders/repeat-02.svg"
-import { Trash2, LoaderCircle, CheckCircle2 } from "lucide-react"
+import { Trash2, LoaderCircle, CheckCircle2, Pencil } from "lucide-react"
 import { formatTo12HourDot } from "../../../utils"
 import { useDeleteReminder, useMakeItCompleted } from "../../../actions/reminder"
+import EditReminder from '../../EditReminder'
+
 
 type Props = {
     _id: string,
@@ -19,7 +21,7 @@ type Props = {
 const Remider: React.FC<Props> = ({ _id, pet, title, frequency, ReminderTime, status }) => {
     const { mutateAsync: deleteReminder, isPending: isDeleting } = useDeleteReminder()
     const { mutateAsync: completeReminder, isPending: isCompleting } = useMakeItCompleted()
-
+    const [isEditing, setIsEditing] = useState(false);
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -59,6 +61,7 @@ const Remider: React.FC<Props> = ({ _id, pet, title, frequency, ReminderTime, st
                             />
                         )
                     )}
+                    <Pencil className='h-5 w-5 cursor-pointer text-green-600' onClick={() => setIsEditing(true)} />
                 </div>
 
             </div>
@@ -78,6 +81,15 @@ const Remider: React.FC<Props> = ({ _id, pet, title, frequency, ReminderTime, st
                     </div>
                 </div>
             }
+            <EditReminder
+                isOpen={isEditing}
+                onClose={() => setIsEditing(false)}
+                title={title}
+                pet={pet}
+                frequency={frequency}
+                ReminderTime={ReminderTime}
+                _id={_id}
+            />
         </motion.div >
     )
 }

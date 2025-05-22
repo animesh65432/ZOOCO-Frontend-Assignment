@@ -29,21 +29,18 @@ export const GetbyId = (id: string) => Call({
     method: "GET"
 })
 
-export const update = (id: string, pet: string, category: string, title: string,
-    startDateTime: Date, endDateTime: Date, frequency: string, ReminderTime: Date, notes?: string,
-) =>
+export const update = (id: string, title: string,
+    pet: string,
+    frequency: string,
+    ReminderTime: string,) =>
     Call({
         path: `/reminders/update/${id}`,
         method: "PUT",
         request: {
             pet,
-            category,
             title,
-            startDateTime,
-            endDateTime,
             frequency,
             ReminderTime,
-            notes
         },
     });
 
