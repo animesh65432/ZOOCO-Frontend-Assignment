@@ -1,15 +1,16 @@
 import React from 'react'
 import Title from './Title'
 import Calendar from './Calendar'
-// import Remider from './Reminder'
+import Remider from './Reminder'
 import AddRemider from './Add'
 import Footer from './Footer'
 import { LoaderCircle } from 'lucide-react';
 import { useGetReminders } from "../../actions/reminder"
 
+
 const Reminders: React.FC = () => {
-    const { data, isLoading } = useGetReminders()
-    console.log(data, isLoading)
+    const { data: reminders, isLoading } = useGetReminders()
+
     return (
         <>
             <Title />
@@ -17,20 +18,21 @@ const Reminders: React.FC = () => {
             {
                 isLoading &&
                 <div className='h-[20vh] flex justify-center items-center'>
-                    <LoaderCircle className='h-4 w-4 animate-spin text-center' />
+                    <LoaderCircle className='h--8 w-8 animate-spin text-center' />
                 </div>
             }
-            {/* {
-                data.map((remider) =>
+            {
+                reminders?.map((reminder) =>
                     <Remider
-                        key={remider.id}
-                        name={remider.name}
-                        petname={remider.petname}
-                        timnig={remider.timnig}
-                        id={remider.id}
-                        day={remider.day}
+                        key={reminder._id}
+                        _id={reminder._id}
+                        pet={reminder.pet}
+                        title={reminder.title}
+                        frequency={reminder.frequency}
+                        ReminderTime={reminder.ReminderTime}
                     />)
-            } */}
+
+            }
             <AddRemider />
             <Footer />
         </>

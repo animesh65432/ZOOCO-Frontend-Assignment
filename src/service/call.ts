@@ -43,6 +43,7 @@ export async function Call<T, ResponseType>({
         const response: AxiosResponse<ResponseType> = await axios(config);
         return response.data;
     } catch (error: unknown) {
+        console.log(error)
         const errMsg = "Something went wrong.";
 
         if (!suppressError) {

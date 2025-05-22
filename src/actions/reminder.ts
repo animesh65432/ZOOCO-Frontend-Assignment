@@ -1,9 +1,9 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Get, GetbyId, create, update, deletebyId } from "../api/reminder"
-
+import type { ReminderTypes } from "../types"
 
 export const useGetReminders = () =>
-    useQuery({
+    useQuery<ReminderTypes[]>({
         queryKey: ['reminders'],
         queryFn: Get
     });

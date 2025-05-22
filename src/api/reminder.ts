@@ -1,4 +1,5 @@
 import { Call } from "../service/call"
+import type { ReminderTypes } from "../types"
 
 export const create = (pet: string, category: string, title: string,
     startDateTime: Date, endDateTime: Date, frequency: string, ReminderTime: Date, notes?: string,
@@ -18,7 +19,7 @@ export const create = (pet: string, category: string, title: string,
     }
 })
 
-export const Get = () => Call({
+export const Get = () => Call<undefined, ReminderTypes[]>({
     path: "/reminders/getAll",
     method: "GET"
 })

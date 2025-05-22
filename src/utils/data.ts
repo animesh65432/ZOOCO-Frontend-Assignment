@@ -63,7 +63,7 @@ export const CateGory = [{
 }]
 
 export const pets = [
-    { name: "Browny", value: "dog", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" },
-    { name: "Browny", value: "dog", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" },
-    { name: "Browny", value: "dog", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" }
+    { name: "Browny", value: "Browny", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" },
+    { name: "Cat", value: "Cat", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" },
+    { name: "Bird", value: "Bird", img: "/aa7107475c4b25e2d9b2432d07de16a7a9484bc3.jpg" }
 ]
