@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Get, GetbyId, create, update, deletebyId } from "../api/reminder"
+import { Get, GetbyId, create, update, deletebyId, makeitCompleted } from "../api/reminder"
 import type { ReminderTypes } from "../types"
 
 export const useGetReminders = () =>
@@ -82,6 +82,16 @@ export const useDeleteReminder = () => {
     const queryClient = useQueryClient();
     return useMutation({
         mutationFn: (id: string) => deletebyId(id),
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ['reminders'] });
+        }
+    });
+};
+
+export const useMakeItCompleted = () => {
+    const queryClient = useQueryClient();
+    return useMutation({
+        mutationFn: (id: string) => makeitCompleted(id),
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['reminders'] });
         }

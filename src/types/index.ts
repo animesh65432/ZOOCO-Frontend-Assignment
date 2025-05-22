@@ -7,5 +7,6 @@ export type ReminderTypes = {
     startDateTime: Date,
     endDateTime: Date,
     frequency: string,
-    ReminderTime: string
+    ReminderTime: string,
+    status: "pending" | "completed"
 }

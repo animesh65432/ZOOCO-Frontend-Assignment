@@ -52,3 +52,7 @@ export const deletebyId = (id: string) => Call({
     method: "DELETE"
 })
 
+export const makeitCompleted = (id: string) => Call({
+    path: `/reminders/complete/${id}`,
+    method: "PUT"
+})
